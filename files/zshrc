@@ -1,0 +1,36 @@
+# zgen
+export ZGEN_RESET_ON_CHANGE=($HOME/.zshrc)
+source $HOME/.zgen/zgen.zsh
+
+if ! zgen saved; then
+  echo "Creating a zgen save"
+  zgen prezto
+  zgen prezto prompt theme 'peepcode' '$'
+
+  zgen prezto archive
+  zgen prezto git
+  zgen prezto utility
+  zgen prezto dnf
+
+  #zgen prezto helper
+  zgen prezto python
+  zgen prezto ruby
+  zgen prezto node
+  zgen prezto rails
+  zgen prezto ssh
+  #zgen prezto tmux
+
+  #zgen prezto rsync
+  #zgen prezto dpkg
+
+  zgen prezto history-substring-search
+  zgen prezto syntax-highlighting
+
+  zgen load zsh-users/zsh-syntax-highlighting
+  zgen load tarruda/zsh-autosuggestions
+
+  zgen save
+fi
+
+#alias st="/opt/sublime_text/sublime_text"
+export EDITOR=$(which nano)
