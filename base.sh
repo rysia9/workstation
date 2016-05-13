@@ -42,7 +42,7 @@ pip install --upgrade pip setuptools
 pip3 install --upgrade pip setuptools
 
 # Configure
-usermod -s /bin/zsh $USER
+usermod -s /bin/zsh vasya
 systemctl enable gdm.service
 systemctl set-default graphical.target
 dracut --regenerate-all --force
