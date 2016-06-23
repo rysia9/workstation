@@ -8,15 +8,15 @@ dnf -y install \
 
 # Xorg
 dnf -y install glx-utils mesa-dri-drivers mesa-libGL mesa-libGLU \
-               plymouth-system-theme xorg-x11-drv-ati xorg-x11-drv-evdev \
-               xorg-x11-server-Xorg xorg-x11-xauth xorg-x11-xinit
+               plymouth-system-theme xorg-x11-drv-intel xorg-x11-drv-evdev \
+               xorg-x11-server-Xorg xorg-x11-xauth xorg-x11-xinit xorg-x11-drv-libinput
 
 # Gnome
 dnf -y install gnome-shell gnome-terminal gnome-tweak-tool file-roller \
                nautilus gedit eog dejavu-sans-mono-fonts google-noto-cjk-fonts
 
 # Console tools
-dnf -y install zsh git wget
+dnf -y install zsh git wget xprop
 
 # Ruby build dependencies
 dnf -y install bzip2 gcc gcc-c++ readline-devel openssl-devel zlib-devel \
@@ -38,7 +38,7 @@ mv --force Telegram /opt/telegram
 dnf -y --refresh update
 
 # Configure
-usermod -s /usr/bin/zsh dima
+usermod -s /usr/bin/zsh sanslar
 systemctl enable gdm.service
 systemctl set-default graphical.target
 dracut --regenerate-all --force
