@@ -1,7 +1,8 @@
 #!/bin/sh -exu
 
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-cp --force files/zshrc $HOME/.zshrc # zsh
+
+#cp --force files/zshrc $HOME/.zshrc # zsh
 
 # Ruby
 #rm -rf $HOME/.rbenv
