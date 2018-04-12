@@ -19,15 +19,15 @@ dnf -y install gnome-shell gnome-terminal gnome-tweak-tool file-roller \
 dnf -y install zsh git wget xprop
 
 # Ruby build dependencies
-dnf -y install bzip2 gcc gcc-c++ readline-devel openssl-devel zlib-devel \
-               sqlite-devel libarchive-devel
+#dnf -y install bzip2 gcc gcc-c++ readline-devel openssl-devel zlib-devel \
+#               sqlite-devel libarchive-devel
 
 # Google Chrome
-dnf -y install https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
+#dnf -y install https://dl.google.com/linux/direct/google-chrome-stable_current_x86_64.rpm
 
 # Telegram
-curl -L https://tdesktop.com/linux | tar -xJv
-mv --force Telegram /opt/telegram
+#curl -L https://tdesktop.com/linux | tar -xJv
+#mv --force Telegram /opt/telegram
 
 # Atom
 #wget -O atom.rpm "https://atom.io/download/rpm"
